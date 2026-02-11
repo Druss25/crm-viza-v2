@@ -3,9 +3,12 @@ import { BetterAuthOptions, betterAuth } from 'better-auth'
 import { drizzleAdapter } from 'better-auth/adapters/drizzle'
 import { nextCookies } from 'better-auth/next-js'
 
+import * as schema from '../db/schema'
+
 export const auth = betterAuth({
     database: drizzleAdapter(db, {
-        provider: 'mysql'
+        provider: 'mysql',
+        schema: schema
     }),
     advanced: {
         cookies: {
