@@ -1,4 +1,5 @@
 export * from './app-sidebar'
+export * from './data-table'
 export * from './loading'
 export * from './nav-main'
 export * from './nav-user'
