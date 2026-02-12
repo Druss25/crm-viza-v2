@@ -9,6 +9,8 @@ import { db } from '@/lib/database'
 import { AppSidebar } from '@/components'
 import { user } from '@/db/schema/auth-schema'
 
+export const dynamic = 'force-dynamic'
+
 export default async function CRMLayout({
     children
 }: Readonly<{
