@@ -1,4 +1,4 @@
-export const authRoutes: string[] = ['/signin', '/signup', '/forgot-password']
+export const authRoutes: string[] = ['/login', '/forgot-password']
 
 export const apiAuthPrefix: string = '/api/auth'
 
