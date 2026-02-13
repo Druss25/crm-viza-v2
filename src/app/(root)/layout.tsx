@@ -25,10 +25,10 @@ export default async function CRMLayout({
         headers: await headers()
     })
 
-    if (!session && count === 0) {
-        redirect('/register')
-    } else {
-        if (!session) {
+    if (!session) {
+        if (count === 0) {
+            redirect('/register')
+        } else {
             redirect('/login')
         }
     }

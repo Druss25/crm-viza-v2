@@ -100,3 +100,5 @@ export const accountRelations = relations(account, ({ one }) => ({
         references: [user.id]
     })
 }))
+
+// db.query.organization.findFirst({ with: { details: true } })

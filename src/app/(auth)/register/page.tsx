@@ -1,8 +1,6 @@
 'use client'
-import { redirect } from 'next/navigation'
+import { RegisterForm } from '@/features/auth/components'
 
 export default function AuthRegisterPage() {
-    redirect('/')
-
-    // return <RegisterForm />
+    return <RegisterForm />
 }

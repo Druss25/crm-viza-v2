@@ -1,7 +1,9 @@
-export type Contract = {
+export type Organization = {
     id: number
     name: string
-    inn: number | string
-    status: 'pending' | 'processing' | 'ended'
-    email: string
+    fullName: string | null
+    inn: string | number | null
+
+    // status: 'pending' | 'processing' | 'ended'
+    // email: string
 }

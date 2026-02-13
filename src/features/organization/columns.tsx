@@ -1,13 +1,11 @@
 'use client'
 
-import type { Contract } from './types'
+import { Organization } from './types'
 import { ColumnDef } from '@tanstack/react-table'
 
 import { Checkbox } from '@/components/ui/checkbox'
 
-import { cn } from '@/lib/utils'
-
-export const columns: ColumnDef<Contract>[] = [
+export const columns: ColumnDef<Organization>[] = [
     {
         id: 'select',
         header: ({ table }) => (
@@ -32,28 +30,28 @@ export const columns: ColumnDef<Contract>[] = [
         enableSorting: false,
         enableHiding: false
     },
-    {
-        accessorKey: 'status',
-        header: '',
-        cell: ({ row }) => {
-            const status = row.getValue('status')
+    // {
+    //     accessorKey: 'status',
+    //     header: '',
+    //     cell: ({ row }) => {
+    //         const status = row.getValue('status')
 
-            return (
-                <div className='flex items-center justify-center'>
-                    <div
-                        className={cn(
-                            'h-3 w-3 rounded-full',
-                            status === 'pending'
-                                ? 'bg-yellow-500'
-                                : status === 'processing'
-                                  ? 'bg-green-500'
-                                  : 'bg-red-500'
-                        )}
-                    />
-                </div>
-            )
-        }
-    },
+    //         return (
+    //             <div className='flex items-center justify-center'>
+    //                 <div
+    //                     className={cn(
+    //                         'h-3 w-3 rounded-full',
+    //                         status === 'pending'
+    //                             ? 'bg-yellow-500'
+    //                             : status === 'processing'
+    //                               ? 'bg-green-500'
+    //                               : 'bg-red-500'
+    //                     )}
+    //                 />
+    //             </div>
+    //         )
+    //     }
+    // },
     {
         accessorKey: 'name',
         header: 'Наименование',
@@ -64,8 +62,8 @@ export const columns: ColumnDef<Contract>[] = [
         }
     },
     {
-        accessorKey: 'email',
-        header: 'E-mail'
+        accessorKey: 'fullName',
+        header: 'Полное наименование'
     },
     {
         accessorKey: 'inn',
