@@ -19,3 +19,5 @@ export async function getOrganizationAll() {
         throw new Error('Ошибка получения данных')
     }
 }
+
+// export const data = await db.query.organization.findMany()
