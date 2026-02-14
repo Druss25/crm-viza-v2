@@ -11,7 +11,7 @@ export async function createOrganization(data: {
     inn: string
 }) {
     const v = insertOrganizationSchema.safeParse(data)
-    if (!v.success) return { success: false, error: 'Validation failed' }
+    if (!v.success) return { success: false, error: v.error.message }
 
     return handleDbOp(db.insert(organization).values(v.data).$returningId())
 }

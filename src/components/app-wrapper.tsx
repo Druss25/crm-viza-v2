@@ -39,7 +39,7 @@ export default function AppWrapper({ title, children }: AppHeaderProps) {
                     </Breadcrumb>
                 </div>
             </header>
-            <div className='flex flex-1 flex-col gap-4 pt-0 md:p-2'>
+            <div className='flex flex-1 flex-col gap-4 px-4 py-2'>
                 {children}
             </div>
         </>

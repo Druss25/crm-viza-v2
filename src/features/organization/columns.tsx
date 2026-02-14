@@ -2,6 +2,7 @@
 
 import { Organization } from './types'
 import { ColumnDef } from '@tanstack/react-table'
+import Link from 'next/link'
 
 import { Checkbox } from '@/components/ui/checkbox'
 
@@ -58,7 +59,14 @@ export const columns: ColumnDef<Organization>[] = [
         cell: ({ row }) => {
             const name = row.getValue('name') as string
 
-            return <div className='uppercase'>{name}</div>
+            return (
+                <Link
+                    href={`/organization/${row.original.id}`}
+                    className='w-full cursor-pointer uppercase hover:underline'
+                >
+                    {name}
+                </Link>
+            )
         }
     },
     {
